@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-weight: 400;
+  color: #222020;
+  background: #fcfcfc;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+body.fixed {
+  overflow: hidden;
+}
+
+.wrapper {
+  margin-top: 50px;
+  flex: 1;
+}
+@media screen and (min-width: 540px) {
+  .wrapper {
+    margin-top: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    margin-top: 50px;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 540px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    padding: 0;
+    margin: auto;
+  }
+}
+
+.content {
+  font-size: 14px;
+  width: 100%;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .content {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+p {
+  margin: 20px 0;
+  text-align: left;
+}
+
+blockquote {
+  border-left: 2px solid #3d3d3d;
+  margin-left: 15px;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+a {
+  color: #003ede;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, a.hover, a:active, a.active {
+  color: #0036bf;
+  text-decoration: underline;
+}
+a.image {
+  cursor: default;
+}
+
+a,
+.button,
+input[type=submit],
+input[type=button] {
+  cursor: pointer;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #8a00de;
+  color: #fcfcfc;
+  font-size: 14px;
+  cursor: pointer;
+}
+.button:hover {
+  background: #003ede;
+  color: #fcfcfc;
+}
+.button:active {
+  background: #0036bf;
+  color: #fcfcfc;
+}
+.button--question {
+  width: 140px;
+  height: 30px;
+}
+@media screen and (min-width: 540px) {
+  .button--question {
+    width: 190px;
+    height: 40px;
+  }
+}
+.button--question svg {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px 0 0;
+}
+@media screen and (min-width: 540px) {
+  .button--question svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+.caption {
+  font-size: 28px;
+  line-height: 34px;
+  color: #3d3d3d;
+  font-weight: 600;
+}
+@media screen and (min-width: 540px) {
+  .caption {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .caption {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+.caption.container {
+  margin: 0 auto;
+}
+.caption--center {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  margin: 1.5em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post img,
+.post iframe {
+  border: 1px solid #3d3d3d;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.overlay.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=global.css.map */

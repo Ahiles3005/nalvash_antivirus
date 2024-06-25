@@ -1,0 +1,42 @@
+@import "variables";
+
+.pagination {
+  display: flex;
+  margin: 30px auto;
+
+  & > .page-numbers {
+    margin: 0 2px;
+    border-radius: 4px;
+    padding: 0 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    line-height: 25px;
+    color: $color-black;
+
+    @media screen and (min-width: $break-s) {
+      padding: 0 6px;
+      margin: 0 6px;
+    }
+
+    @media screen and (min-width: $break-l) {
+      padding: 0 8px;
+      margin: 0 10px;
+    }
+
+    &.current {
+      background: $color-gray-light;
+      color: $color-white;
+    }
+  }
+
+  & > a {
+    text-decoration: none;
+
+    &:hover {
+      background: $color-gray-light;
+      color: $color-white;
+    }
+  }
+}

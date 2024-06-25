@@ -1,0 +1,13 @@
+.admin-bar .header {
+  top: 46px !important;
+
+  @media screen and (min-width: 786px) {
+    top: 32px !important;
+  }
+}
+
+#wpadminbar {
+  @media screen and (max-width: 600px) {
+    position: fixed !important;
+  }
+}

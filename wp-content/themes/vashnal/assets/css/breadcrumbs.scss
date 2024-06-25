@@ -1,0 +1,35 @@
+@import "variables";
+
+.breadcrumbs {
+
+  @media screen and (min-width: $break-l) {
+    margin-top: 30px;
+  }
+
+  &__list {
+    margin: 20px 0 20px;
+    font-size: 13px;
+    padding: 15px 0;
+    line-height: 1;
+    border-top: 1px solid $color-gray-super-light;
+    border-bottom: 1px solid $color-gray-super-light;
+    display: block;
+    width: 100%;
+
+    @media screen and (min-width: $break-s) {
+      font-size: 14px;
+    }
+
+    a {
+      color: $color-black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .breadcrumb_last {
+      color: $color-gray-medium-dark;
+    }
+  }
+}

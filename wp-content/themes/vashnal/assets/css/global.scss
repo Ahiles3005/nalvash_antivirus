@@ -1,0 +1,227 @@
+@import "variables";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  color: $color-black;
+  background: $color-white;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  &.fixed {
+    overflow: hidden;
+  }
+}
+
+// wrapper
+.wrapper {
+  margin-top: $header-height-s;
+  flex: 1;
+
+  @media screen and (min-width: $break-s) {
+    margin-top: $header-height-m;
+  }
+
+  @media screen and (min-width: $break-l) {
+    margin-top: $header-height-l;
+  }
+}
+
+// container
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $break-s) {
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: $break-l) {
+    width: $container-width-l;
+    padding: 0;
+    margin: auto;
+  }
+}
+
+.content {
+  font-size: 14px;
+  width: 100%;
+  line-height: 20px;
+
+  @media screen and (min-width: $break-m) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+p {
+  margin: 20px 0;
+  text-align: left;
+}
+
+blockquote {
+  border-left: 2px solid $color-gray;
+  margin-left: 15px;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+// svg
+svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+// links
+a {
+  color: $color-button-hover;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &.hover,
+  &:active,
+  &.active {
+    color: $color-button-active;
+    text-decoration: underline;
+  }
+
+  &.image {
+    cursor: default;
+  }
+}
+
+// buttons
+a,
+.button,
+input[type='submit'],
+input[type='button'] {
+  cursor: pointer;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: $color-button;
+  color: $color-white;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-button-hover;
+    color: $color-white;
+  }
+
+  &:active {
+    background: $color-button-active;
+    color: $color-white;
+  }
+
+  &--question {
+    width: 140px;
+    height: 30px;
+
+    @media screen and (min-width: $break-s) {
+      width: 190px;
+      height: 40px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      margin: 0 5px 0 0;
+
+      @media screen and (min-width: $break-s) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+// common states classes
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+// captions
+.caption {
+  font-size: 28px;
+  line-height: 34px;
+  color: $color-gray;
+  font-weight: $font-weight-bold;
+
+  @media screen and (min-width: $break-s) {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  @media screen and (min-width: $break-l) {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  &.container {
+    margin: 0 auto;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+h1, h2, h3 {
+  margin: 1.5em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post img,
+.post iframe {
+  border: 1px solid $color-gray;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+
+  &.hidden {
+    display: none;
+  }
+}

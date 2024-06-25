@@ -1,0 +1,66 @@
+@import "variables";
+
+.search-results {
+
+  &__list {
+
+    &__item {
+      padding: 20px 0;
+      border-bottom: 1px solid $color-gray-super-light;
+
+      &__date {
+        color: $color-gray-light;
+        font-size: 14px;
+      }
+
+      &__name {
+        display: block;
+        font-size: 18px;
+        margin: 0 0 10px;
+        font-family: $font-family;
+        color: $color-gray;
+        font-weight: $font-weight-bold;
+
+        @media screen and (min-width: $break-m) {
+          font-size: 20px;
+        }
+
+        @media screen and (min-width: $break-l) {
+          font-size: 22px;
+        }
+
+        b {
+          text-decoration: underline;
+        }
+      }
+
+      &__text {
+        font-size: 14px;
+        line-height: 20px;
+
+        @media screen and (min-width: $break-s) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  &__empty {
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 400px;
+
+    @media screen and (min-width: $break-s) {
+      text-align: left;
+      margin: 40px 0;
+    }
+
+    @media screen and (min-width: $break-m) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
